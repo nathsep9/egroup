@@ -1,23 +1,26 @@
-import logo from './logo.svg';
-import './App.css';
+import { Container } from "@mui/material";
+import Carousel from "components/Carousel";
+import { Description } from "./Description";
+import "./App.css";
+import { Header } from "./components/Header";
+import { Card } from "./components/Card";
+import Contant from "components/Card/Contant";
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Header />
+      <Container
+        sx={{
+          marginY: (theme) => theme.spacing(2),
+        }}
+      >
+        <Carousel />
+        <Description />
+        <h1>Productos</h1>
+        <Card />
+        <Contant />
+      </Container>
     </div>
   );
 }
