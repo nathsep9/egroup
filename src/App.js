@@ -1,27 +1,21 @@
-import { Container } from "@mui/material";
-import Carousel from "components/Carousel";
-import { Description } from "./Description";
-import "./App.css";
-import { Header } from "./components/Header";
-import { Card } from "./components/Card";
-import Contant from "components/Card/Contant";
+import Header from "components/Header";
+import { Routes, Route } from "react-router-dom";
+
+import { ROUTES } from "constantsApp";
+import Main from "routes/Main";
+import Products from "routes/Products";
+import Description from "routes/Description";
 
 function App() {
   return (
-    <div className="App">
+    <>
       <Header />
-      <Container
-        sx={{
-          marginY: (theme) => theme.spacing(2),
-        }}
-      >
-        <Carousel />
-        <Description />
-        <h1>Productos</h1>
-        <Card />
-        <Contant />
-      </Container>
-    </div>
+      <Routes>
+        <Route path="*" element={<Main />} />
+        <Route path={ROUTES.PRODUCTS} element={<Products />} />
+        <Route path={ROUTES.DESCRIPTION} element={<Description />} />
+      </Routes>
+    </>
   );
 }
 

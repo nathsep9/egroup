@@ -13,15 +13,15 @@ const Item = styled(Paper)(({ theme }) => ({
 }));
 export const Description = () => {
   return (
-    <Box sx={{ flexGrow: 1 }}>
+    <Box>
       <h1>Bienvenidos a MercaMundial</h1>
-      <Grid container spacing={2} columns={16}>
-        <Grid item xs={8}>
+      <Grid container spacing={2}>
+        <Grid item xs={6}>
           <Item>
             <ListImage />
           </Item>
         </Grid>
-        <Grid item xs={8}>
+        <Grid item xs={6}>
           <Item>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae
             porro hic ullam magnam quae consequatur animi nemo corporis,

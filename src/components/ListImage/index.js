@@ -5,7 +5,7 @@ import ImageListItem from "@mui/material/ImageListItem";
 
 export function ListImage() {
   return (
-    <Box sx={{ width: 500, height: 450, overflowY: "scroll" }}>
+    <Box sx={{ height: 450, overflowY: "scroll" }}>
       <ImageList variant="masonry" cols={3} gap={8}>
         {itemData.map((item) => (
           <ImageListItem key={item.img}>
